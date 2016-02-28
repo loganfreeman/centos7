@@ -39,4 +39,16 @@ function installPassenger() {
   return 1
 }
 
+function manual_install_passenger() {
+  # manuall install using the following scripts
+  gem install bundler --no-rdoc --no-ri
+  gem install rails --no-rdoc --no-ri
+  gem install rake --no-rdoc --no-ri
+  gem install passenger
+  yum install -y libcurl-devel
+  passenger-install-apache2-module
+  cp /vagrant/passenger.conf /etc/httpd/conf.modules.d
+  passenger-config validate-install
+}
+
 installPassenger

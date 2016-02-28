@@ -1,4 +1,7 @@
 .vagrant
 www
-profiling 
+profiling
 projects
+dl.fedoraproject.org
+dump.rdb
+*.rpm

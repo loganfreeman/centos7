@@ -19,6 +19,4 @@ virtualenv -q --system-site-packages $PYTHON_DEV_DIR
 cd $PYTHON_DEV_DIR && source bin/activate
 pip install ipython gunicorn django mod_wsgi --quiet
 
-# set a login message and done
-mv -f $DEVDIR/motd /etc/
 echo "DONE"

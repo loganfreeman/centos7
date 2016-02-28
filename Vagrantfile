@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   # Port forward 80 to 8080
   config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
   config.vm.network :forwarded_port, guest: 8081, host: 8081, auto_correct: true
-  config.vm.network :forwarded_port, guest: 443, host: 443, auto_correct: true
+  #config.vm.network :forwarded_port, guest: 443, host: 443, auto_correct: true
   config.vm.network :forwarded_port, guest: 3306, host: 3306, auto_correct: true
   config.vm.network :forwarded_port, guest: 1080, host: 1080, auto_correct: true
 

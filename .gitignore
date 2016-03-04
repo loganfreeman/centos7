@@ -5,3 +5,5 @@ projects
 dl.fedoraproject.org
 dump.rdb
 *.rpm
+resources
+resources/*.tar.gz

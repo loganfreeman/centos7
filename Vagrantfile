@@ -28,20 +28,20 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--memory", mem]
   end
   # Required for NFS to work, pick any local IP
-  # config.vm.network :private_network, ip: '192.168.50.50'
+  config.vm.network :private_network, ip: '192.168.50.50'
   # Use NFS for shared folders for better performance
   config.vm.synced_folder '.', '/vagrant'
 
   #---Networking---
 
   # Port forward 80 to 8080
-  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+  config.vm.network :forwarded_port, guest: 80, host: 8000, auto_correct: true
   config.vm.network :forwarded_port, guest: 8081, host: 8081, auto_correct: true
   #config.vm.network :forwarded_port, guest: 443, host: 443, auto_correct: true
-  config.vm.network :forwarded_port, guest: 3306, host: 3306, auto_correct: true
-  config.vm.network :forwarded_port, guest: 1080, host: 1080, auto_correct: true
+  config.vm.network :forwarded_port, guest: 3306, host: 33060, auto_correct: true
+  config.vm.network :forwarded_port, guest: 1080, host: 10800, auto_correct: true
 
-  config.vm.network :forwarded_port, guest: 1090, host: 1090, auto_correct: true
+  config.vm.network :forwarded_port, guest: 1090, host: 10900, auto_correct: true
 
   #Uncomment this if you want bridged network functionality
   #config.vm.network :public_network

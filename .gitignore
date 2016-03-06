@@ -7,3 +7,4 @@ dump.rdb
 *.rpm
 resources
 resources/*.tar.gz
+download/

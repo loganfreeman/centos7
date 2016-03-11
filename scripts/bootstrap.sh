@@ -9,6 +9,4 @@ if [ ! "$(grep single-request-reopen /etc/resolv.conf)" ];
 fi
 
 yum install -y kernel-devel-$(uname -r) kernel-headers-$(uname -r)
-/etc/init.d/vboxadd setup
-
 echo "Bootstrap complete"

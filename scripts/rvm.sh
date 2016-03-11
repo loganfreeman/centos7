@@ -28,6 +28,7 @@ else
   rvm list | grep ruby-2.1.5 || rvm install 2.1.5
   rvm use 2.1.5 --default
   gem install bundler
+  usermod -a -G vagrant
 fi
 
 installQtWebkit

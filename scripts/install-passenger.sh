@@ -51,4 +51,4 @@ function manual_install_passenger() {
   passenger-config validate-install
 }
 
-installPassenger
+manual_install_passenger

@@ -55,7 +55,7 @@ Vagrant.configure("2") do |config|
   #config.vm.provision :shell, :path => "scripts/install-silverstripe.sh", :args => "-v 3.x-dev"
   config.vm.provision :shell, :path => "scripts/apache.sh"
   config.vm.provision :shell, :path => "scripts/mariadb.sh"
-  config.vm.provision :shell, :path => "scripts/install-passenger.sh"
+  # config.vm.provision :shell, :path => "scripts/install-passenger.sh"
   config.vm.provision :shell, :path => "scripts/rvm.sh"
   config.vm.provision :shell, :path => "scripts/python.sh"
   config.vm.provision :shell, :path => "scripts/postgres.sh"

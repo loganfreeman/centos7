@@ -26,7 +26,7 @@ function createApacheSitesDir() {
 
 
 echo "Installing Apache"
-yum install -y httpd
+yum install -y httpd emacs
 
 echo "Adding Apache service to autostart"
 systemctl enable httpd.service

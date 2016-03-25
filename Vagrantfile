@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
 
     mem = mem / 1024 / 4
     v.customize ["modifyvm", :id, "--memory", mem]
+    v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
   end
   # Required for NFS to work, pick any local IP
   config.vm.network :private_network, ip: '192.168.50.50'
